@@ -25,6 +25,7 @@ const HeroSection: React.FC = () => {
         fill="white"
       />  
      <div className='text-center flex flex-col items-center justify-center px-2 gap-1'> 
+       <div className="absolute inset-0 bg-gradient-to-t from-[#a8dadc] dark:from-violet-600/50 via-transparent to-transparent z-0 pointer-events-none" />
       <div
         className="group rounded-full border border-black/5  text-base transition-all ease-in hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800">
         <div className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
@@ -47,7 +48,7 @@ const HeroSection: React.FC = () => {
             return(
               <Tooltip key={x}>
                 <TooltipTrigger>                  
-                  <Icon className='hover:scale-110 hover:-translate-y-1 transition-all'/>              
+                  <Icon className='hover:scale-110 hover:-translate-y-1 transition-all hover:stroke-[#f2e8cf]'/>              
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>{x}</p>

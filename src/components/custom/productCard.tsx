@@ -209,7 +209,7 @@ const cards = [
     title: "Mitran Di Chhatri1",
     src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "#",
     content: () => {
       return (
         <p>
@@ -231,7 +231,7 @@ const cards = [
     title: "Mitran Di Chhatri2",
     src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "#",
     content: () => {
       return (
         <p>
@@ -253,7 +253,7 @@ const cards = [
     title: "Mitran Di Chhatri3",
     src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "#",
     content: () => {
       return (
         <p>

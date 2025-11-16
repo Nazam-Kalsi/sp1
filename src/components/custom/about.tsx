@@ -4,10 +4,10 @@ const About: React.FC= () => {
   return (
     <section
       id="about"
-      className="px-4 sm:px-8 lg:px-20 py-16 sm:py-24 transition-colors bg-teal-600 mx-2 rounded-lg dark-bg-black"
+      className="px-4 sm:px-8 lg:px-20 py-16 sm:py-24 transition-colors bg-[#a8dadc] dark:bg-gradient-to-b dark:from-violet-600/50 dark:to-transparent dark:bg-transparent"
     >
       <div className="max-w-3xl mx-auto text-center space-y-6">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold ">
           The Vision That Guides Us
         </h1>
     
