@@ -1,9 +1,93 @@
-import * as React from 'react';
-import GoogleMapReact from 'google-map-react';
+'use client'
+import {useState} from 'react';
+import emailjs from "@emailjs/browser";
 
 const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone:'',
+    email: '',
+    message: ''
+  });
+  const [errors, setErrors] = useState({
+    name: '',
+    phone:'',
+    email: '',
+    message: ''
+  });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      setErrors((prev: any) => ({
+          ...prev,
+          [e.target.name]: "",
+        }));
+    };
+  
+  const validateForm = () => {
+    let valid = true;
+    let newErrors: any = {};
+  
+    // Name
+    if (!formData.name.trim()) {
+      newErrors.name = "Full name is required";
+      valid = false;
+    }
+  
+    // Phone
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+      valid = false;
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Phone number must be 10 digits";
+      valid = false;
+    }
+  
+    // Email
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+      valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Enter a valid email";
+      valid = false;
+    }
+  
+    // Message
+    if (!formData.message.trim()) {
+      newErrors.message = "Message cannot be empty";
+      valid = false;
+    }
+  
+    setErrors(newErrors);
+    return valid;
+  };
+
+  const handleSubmit = async() => {
+    try{
+       if (!validateForm()) return;
+      const sendMail=  await emailjs
+           .send(
+             (process.env.NEXT_PUBLIC_SERVICE_ID as string),
+             (process.env.NEXT_PUBLIC_TEMPLATE_ID as string),
+             {
+               name: formData.name,
+               phone: formData.phone,
+               email: formData.email,
+               message: formData.message,
+               date: new Date().toLocaleDateString()
+             },
+             (process.env.NEXT_PUBLIC_PUBLIC_KEY as string)
+           )
+      if(sendMail){
+         setFormData({ name: "", email: "", message: "", phone:'' });
+         alert('Message sent successfully!');
+      }
+    }catch(err){
+      console.log(err);
+    }
+  } 
   return (
-    <div className="max-w-6xl max-lg:max-w-3xl mx-auto p-4">
+    <div className="max-w-6xl max-lg:max-w-3xl mx-auto p-4 py-16" id='contact'>
           <div
             className="grid lg:grid-cols-2 gap-16 items-center relative overflow-hidden p-8  before:absolute before:right-0 before:w-[300px] before:bg-[#a8dadc] before:h-full max-lg:before:hidden">
             <div>
@@ -14,23 +98,42 @@ const Contact: React.FC = () => {
               <form>
                 <div className="space-y-4 mt-8">
                   <input type="text" placeholder="Full Name"
+                  name='name'
+                  value={formData.name}
+                  onChange={handleChange}
                     className="px-2 py-3 w-full text-sm border-b border-slate-300 focus:border-blue-600 outline-none" />
+                    {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
+
                   
                   <input type="number" placeholder="Phone No."
+                  name='phone'
+                  value={formData.phone}
+                  onChange={handleChange}
                     className="px-2 py-3 w-full text-sm border-b border-slate-300 focus:border-blue-600 outline-none" />
-    
+                    {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
+
                   <input type="email" placeholder="Email"
+                  name='email'
+                  value={formData.email}
+                  onChange={handleChange}
                     className="px-2 py-3 w-full text-sm border-b border-slate-300 focus:border-blue-600 outline-none" />
+                    {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
+
     
                   <textarea placeholder="Write Message" rows={4}
+                    name='message'
+                  value={formData.message}
+                  onChange={handleChange}
                     className="px-2 pt-3 w-full text-sm border-b border-slate-300 focus:border-blue-600 outline-none"></textarea>
+                  {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
+
                 </div>
     
-                <button type="button"
+                <button type="button" onClick={handleSubmit}
                   className="rounded-md mt-8 flex items-center justify-center text-sm font-medium w-full px-4 py-2.5 bg-[#f2e8df] hover:bg-[#f2e8cf] text-black cursor-pointer">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#000' className="mr-2"
                     viewBox="0 0 548.244 548.244">
-                    <path fill-rule="evenodd"
+                    <path fillRule="evenodd"
                       d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
                       clipRule="evenodd" data-original="#000000" />
                   </svg>
@@ -66,8 +169,8 @@ const Contact: React.FC = () => {
             
             <div className="z-10 relative h-full max-lg:min-h-[350px]">
               <iframe src="https://maps.google.com/maps?q=talwandiBhai&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                className="left-0 top-0 h-full w-full" frameborder="0"
-                allowfullscreen></iframe>
+                className="left-0 top-0 h-full w-full" frameBorder="0"
+                allowFullScreen></iframe>
             </div>
           </div>
         </div>

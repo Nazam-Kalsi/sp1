@@ -133,3 +133,10 @@
     transform: translate(-50%, -40%) scale(1);
   }
 }
+
+#__next-dev-overlay,
+#__next-dev-toolbar-container,
+#next-dev-tools-menu
+#next-logo{
+  display: none !important;
+}

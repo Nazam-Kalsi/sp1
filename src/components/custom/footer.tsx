@@ -1,8 +1,6 @@
 'use client'
 import * as React from "react";
-import { Button } from "../ui/button";
-import { Mail, Phone } from "lucide-react";
-import Link from "next/link";
+import { Social } from "./heroSec";
 
 const Footer: React.FC = () => {
   return (
@@ -16,7 +14,8 @@ const Footer: React.FC = () => {
             <li><a href="#contact" className="">Contact</a></li>
           </ul>
         </div>
-        <div className="flex justify-center gap-4">
+        <Social className = ''/>
+        {/*<div className="flex justify-center gap-4">
           <Button className="bg-[#a8dadc] hover:bg-[#a8dacc] text-black" onClick={() => window.location.href = "tel:+911234567890"}>
             <Phone/>Call
                 </Button>
@@ -39,7 +38,7 @@ const Footer: React.FC = () => {
                 <Button onClick={() => window.location.href = "mailto:example@gmail.com"}>
                   <Mail/> Mail
                 </Button>
-        </div>
+        </div>*/}
         <p className= 'text-center'>© 2025 Your Company, Inc. All rights reserved.</p>
         
       </div>
