@@ -12,7 +12,7 @@ const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full top-0 z-[99]">
+    <nav className="fixed w-full top-0 z-99">
          <section className="border border-gray-50/10 p-2 m-2 flex justify-between items-center bg-gray-400/10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm">
            
            {/* Left: Logo */}

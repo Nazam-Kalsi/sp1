@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect, useId, useRef, useState } from "react";
+import React, { RefObject, useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import Image from "next/image";
 
   export function ProductCard() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -28,7 +29,7 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [active]);
 
-  useOutsideClick(ref, () => setActive(null));
+  useOutsideClick((ref as RefObject<HTMLDivElement>), () => setActive(null));
 
   return (
     <>
@@ -44,7 +45,7 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0  grid place-items-center z-[100]">
+          <div className="fixed inset-0  grid place-items-center z-100">
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
@@ -71,7 +72,7 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
               className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
-                <img
+                <Image
                   width={200}
                   height={200}
                   src={active.src}
@@ -129,16 +130,17 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
       </AnimatePresence>
       <ul className="max-w-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-4">
           {
-            cards.map((card, index) => (
+            cards.map((card,index) => (
               <motion.div
+        
                 layoutId={`card-${card.title}-${id}`}
-                key={card.title}
+                key={index}
                 onClick={() => setActive(card)}
                 className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
               >
                 <div className="flex gap-4 flex-col  w-full">
                   <motion.div layoutId={`image-${card.title}-${id}`}>
-                    <img
+                    <Image
                       width={100}
                       height={100}
                       src={card.src}
