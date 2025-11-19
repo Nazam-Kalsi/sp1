@@ -3,7 +3,12 @@
 'use client'
 import {useState} from 'react';
 import emailjs from "@emailjs/browser";
+import { Titan_One } from "next/font/google";
 
+const titan = Titan_One({
+  subsets: ["latin"],
+  weight: ["400"],
+})
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -19,7 +24,6 @@ const Contact: React.FC = () => {
   });
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       setFormData({ ...formData, [e.target.name]: e.target.value });
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
       setErrors((prev: any) => ({
           ...prev,
           [e.target.name]: "",
@@ -89,12 +93,14 @@ const Contact: React.FC = () => {
     }
   } 
   return (
+    <div className='bg-linear-to-b  from-[#63A361] to-transparent dark:from-transparent'>
     <div className="max-w-6xl max-lg:max-w-3xl mx-auto p-4 py-16" id='contact'>
+        <h1 className={`text-5xl pb-3 font-bold text-center  text-[#FFFD8F] dark:text-violet-700 text-shadow-lg ${titan.className}`}>Contact us</h1>
           <div
-            className="grid lg:grid-cols-2 gap-16 items-center relative overflow-hidden p-8  before:absolute before:right-0 before:w-[300px] before:bg-[#a8dadc] before:h-full max-lg:before:hidden">
+            className="grid lg:grid-cols-2 gap-16 items-center relative overflow-hidden p-8  before:absolute before:right-0 before:w-[300px] before:bg-[#FFFD8F] before:h-full max-lg:before:hidden">
             <div>
-              <h2 className="text-3xl font-bold">Get In Touch</h2>
-              <p className="text-[15px] dark:text-slate-300 text-slate-500 mt-4 leading-relaxed">Have a specific inquiry Our
+            <h2 className={`text-2xl font-bold text-[#FFFD8F] dark:text-violet-700 ${titan.className} `}>Get In Touch</h2>
+              <p className="text-[15px] leading-relaxed">Have a specific inquiry Our
                 experienced team is ready to engage with you.</p>
     
               <form>
@@ -103,7 +109,7 @@ const Contact: React.FC = () => {
                   name='name'
                   value={formData.name}
                   onChange={handleChange}
-                    className="px-2 py-3 w-full text-sm border-b border-slate-300 focus:border-blue-600 outline-none" />
+                    className="px-2 py-3 w-full text-sm border-b border-black/50 dark:border-white focus:border-blue-600 outline-none placeholder-black dark:placeholder-white" />
                     {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
 
                   
@@ -111,14 +117,14 @@ const Contact: React.FC = () => {
                   name='phone'
                   value={formData.phone}
                   onChange={handleChange}
-                    className="px-2 py-3 w-full text-sm border-b border-slate-300 focus:border-blue-600 outline-none" />
+                    className="px-2 py-3 w-full text-sm border-b border-black/50 dark:border-white focus:border-blue-600 outline-none placeholder-black dark:placeholder-white" />
                     {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
 
                   <input type="email" placeholder="Email"
                   name='email'
                   value={formData.email}
                   onChange={handleChange}
-                    className="px-2 py-3 w-full text-sm border-b border-slate-300 focus:border-blue-600 outline-none" />
+                    className="px-2 py-3 w-full text-sm border-b border-black/50 dark:border-white focus:border-blue-600 outline-none placeholder-black dark:placeholder-white" />
                     {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
 
     
@@ -126,13 +132,13 @@ const Contact: React.FC = () => {
                     name='message'
                   value={formData.message}
                   onChange={handleChange}
-                    className="px-2 pt-3 w-full text-sm border-b border-slate-300 focus:border-blue-600 outline-none"></textarea>
+                    className="px-2 pt-3 w-full text-sm border-b border-black/50 dark:border-white focus:border-blue-600 outline-none placeholder-black dark:placeholder-white"></textarea>
                   {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
 
                 </div>
     
                 <button type="button" onClick={handleSubmit}
-                  className="rounded-md mt-8 flex items-center justify-center text-sm font-medium w-full px-4 py-2.5 bg-[#f2e8df] hover:bg-[#f2e8cf] text-black cursor-pointer">
+                  className="border border-black/20 rounded-md mt-8 flex items-center justify-center text-sm font-medium w-full px-4 py-2.5 bg-[#f2e8df] hover:bg-[#f2e8cf] text-black cursor-pointer">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#000' className="mr-2"
                     viewBox="0 0 548.244 548.244">
                     <path fillRule="evenodd"
@@ -176,7 +182,8 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </div>
-  );
+    </div>
+        );
 };
 
 export default Contact;

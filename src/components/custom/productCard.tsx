@@ -4,7 +4,12 @@ import React, { RefObject, useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import Image from "next/image";
+import { Titan_One,Satisfy } from "next/font/google";
 
+const titan = Titan_One({
+  subsets: ["latin"],
+  weight: ["400"],
+});
   export function ProductCard() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
     null
@@ -45,7 +50,7 @@ import Image from "next/image";
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0  grid place-items-center z-100">
+          <div className="fixed inset-0  grid place-items-center z-[9999]">
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
@@ -73,17 +78,18 @@ import Image from "next/image";
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
+                  unoptimized
                   width={200}
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover "
                 />
               </motion.div>
 
               <div>
                 <div className="flex justify-between items-start p-4">
-                  <div className="">
+                  <div className={`text-[#FFFD8F] text-shadow-lg ${titan.className}`}>
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
                       className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
@@ -136,31 +142,32 @@ import Image from "next/image";
                 layoutId={`card-${card.title}-${id}`}
                 key={index}
                 onClick={() => setActive(card)}
-                className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+                className="p-4 flex flex-col bg-linear-to-b from-[#63A361] dark:from-violet-700 to-transparent hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
               >
                 <div className="flex gap-4 flex-col  w-full">
                   <motion.div layoutId={`image-${card.title}-${id}`}>
                     <Image
+                      unoptimized
                       width={100}
                       height={100}
                       src={card.src}
                       alt={card.title}
-                      className="h-60 w-full  rounded-lg object-cover object-top"
+                      className="h-60 w-full rounded-lg object-cover object-top"
                     />
                   </motion.div>
                   <div className="flex justify-center items-center flex-col">
                     <motion.h3
                       layoutId={`title-${card.title}-${id}`}
-                      className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
+                      className="font-bold text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
                     >
                       {card.title}
                     </motion.h3>
-                    <motion.p
+                    {/*<motion.p
                       layoutId={`description-${card.description}-${id}`}
                       className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
                     >
                       {card.description}
-                    </motion.p>
+                    </motion.p>*/}
                   </div>
                 </div>
               </motion.div>
@@ -207,67 +214,43 @@ export const CloseIcon = () => {
 const cards = [
  
   {
-    description: "Babbu Maan",
-    title: "Mitran Di Chhatri1",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
-    ctaText: "Visit",
-    ctaLink: "#",
+    // description: "Front Weights",
+    title: "Front Weights",
+    src: "/images/weights.jpg",
+    // ctaText: "Visit",
+    // ctaLink: "#",
     content: () => {
       return (
         <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+         front weights
         </p>
       );
     },
   },
   {
-    description: "Babbu Maan",
-    title: "Mitran Di Chhatri2",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
-    ctaText: "Visit",
-    ctaLink: "#",
+    // description: "Hood",
+    title: "Hood",
+    src: "/images/hood.jpg",
+    // ctaText: "Visit",
+    // ctaLink: "#",
     content: () => {
       return (
         <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+          Hood
         </p>
       );
     },
   },
   {
-    description: "Babbu Maan",
-    title: "Mitran Di Chhatri3",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
-    ctaText: "Visit",
-    ctaLink: "#",
+    // description: "",
+    title: "Wheel guard",
+    src: "/images/guard.jpg",
+    // ctaText: "Visit",
+    // ctaLink: "#",
     content: () => {
       return (
         <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+          Guard
         </p>
       );
     },

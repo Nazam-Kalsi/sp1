@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
            hostname: "assets.aceternity.com",
            pathname: "/**",
          },
+      {
+           protocol: "https",
+           hostname: "img.youtube.com",
+           pathname: "/**",
+         },
     ],
   },
 };

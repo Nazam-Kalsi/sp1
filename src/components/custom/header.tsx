@@ -12,20 +12,20 @@ const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full top-0 z-99">
-         <section className="border border-gray-50/10 p-2 m-2 flex justify-between items-center bg-gray-400/10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm">
+    <nav className="fixed w-full top-0 z-[999]">
+         <section className="border border-gray-50/10 p-2 m-2 flex justify-between items-center bg-gray-400/20 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm">
            
            {/* Left: Logo */}
            <div className="flex gap-2 items-center">
              <Image
                unoptimized
-               src="https://placehold.co/400.png"
+               src="images/logo.png"
                alt="Logo"
                width={40}
                height={40}
                className="rounded-full"
              />
-             <p className="font-semibold">name</p>
+             {/*<p className="font-semibold">Gobind Rai Engg. Works</p>*/}
            </div>
    
            {/* Desktop Nav */}
@@ -33,6 +33,7 @@ const Header: React.FC = () => {
              <Link href="/"><Button variant="ghost">Home</Button></Link>
              <Link href="#about"><Button variant="ghost">About</Button></Link>
              <Link href="#products"><Button variant="ghost">Products</Button></Link>
+             <Link href="#youtube"><Button variant="ghost">Videos</Button></Link>
              <Link href="#contact">
                <Button variant="ghost">Contact</Button>
              </Link>
@@ -74,6 +75,9 @@ const Header: React.FC = () => {
    
                <Link href="#contact" onClick={() => setOpen(false)}>
                  <Button className="w-full" variant="ghost">Contact</Button>
+               </Link>
+               <Link href="#youtube" onClick={() => setOpen(false)}>
+                 <Button className="w-full" variant="ghost">Videos</Button>
                </Link>
              </div>
            </div>
