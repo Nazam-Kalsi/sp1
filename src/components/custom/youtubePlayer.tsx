@@ -11,39 +11,39 @@ const titan = Titan_One({
 
 export const videoData = [
   {
-    id: "dQw4w9WgXcQ",
-    title: "Rick Astley - Never Gonna Give You Up",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
+    id: "pybdNqriW3U",
+    title: "",
+    thumbnail: "https://www.youtube.com/watch?v=pybdNqriW3U"
   },
   {
-    id: "9bZkp7q19f0",
-    title: "PSY - GANGNAM STYLE(강남스타일)",
-    thumbnail: "https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg"
+    id: "W130SEPoLw0",
+    title: "",
+    thumbnail: "https://www.youtube.com/watch?v=W130SEPoLw0"
   },
   {
-    id: "3JZ_D3ELwOQ",
-    title: "Charlie Puth - Attention",
-    thumbnail: "https://img.youtube.com/vi/3JZ_D3ELwOQ/hqdefault.jpg"
-  },
-  {
-    id: "fRh_vgS2dFE",
+    id: "r4HBgmrbCR8",
     title: "Justin Bieber - Sorry",
-    thumbnail: "https://img.youtube.com/vi/fRh_vgS2dFE/hqdefault.jpg"
+    thumbnail: "https://www.youtube.com/watch?v=r4HBgmrbCR8"
   },
   {
-    id: "kXYiU_JCYtU",
-    title: "Linkin Park - Numb",
-    thumbnail: "https://img.youtube.com/vi/kXYiU_JCYtU/hqdefault.jpg"
+    id: "dOA4-EREHyg",
+    title: "",
+    thumbnail: "https://www.youtube.com/watch?v=dOA4-EREHyg"
   },
   {
-    id: "e-ORhEE9VVg",
-    title: "Taylor Swift - Blank Space",
-    thumbnail: "https://img.youtube.com/vi/e-ORhEE9VVg/hqdefault.jpg"
+    id: "xwoH98hA43k",
+    title: "",
+    thumbnail: "https://www.youtube.com/watch?v=xwoH98hA43k"
   },
   {
-    id: "RgKAFK5djSk",
+    id: "rBVn65lY4xQ",
+    title: "",
+    thumbnail: "https://www.youtube.com/watch?v=rBVn65lY4xQ"
+  },
+  {
+    id: "OZLsgAtDDrw",
     title: "Wiz Khalifa - See You Again ft. Charlie Puth",
-    thumbnail: "https://img.youtube.com/vi/RgKAFK5djSk/hqdefault.jpg"
+    thumbnail: "https://www.youtube.com/watch?v=OZLsgAtDDrw"
   }
 ];
 
@@ -56,7 +56,7 @@ export const videoData = [
     <>
       {/* Thumbnail Card */}
       <div
-        className="w-full max-w-sm cursor-pointer rounded-xl overflow-hidden hover:scale-[1.02] transition-transform flex items-center justify-center bg-linear-to-b from-[#63A361] dark:from-violet-700 to-transparent hover:shadow-xl p-3"
+        className="w-full max-w-sm cursor-pointer rounded-xl overflow-hidden hover:scale-[1.02] transition-transform flex items-center justify-center bg-linear-to-b from-[#63A361] dark:from-violet-700 to-transparent hover:shadow-xl p-3 mx-2"
         onClick={() => setOpen(true)}
       >
                  

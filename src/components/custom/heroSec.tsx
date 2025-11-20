@@ -39,16 +39,19 @@ export const Social = ({className}:{className?:string})=>{
   };
   return(
     <div className={`flex items-center justify-center gap-6 ${className}`}>
-      {["Instagram", "Facebook", "Youtube", "Mail"].map((x) => {
+      {[{name:"Instagram",src:'https://www.instagram.com/gobind_rai032/'}, {name:"Facebook",src:'https://www.facebook.com/people/gobind_rai032/100070850617647/'}, {name:"Youtube",src:'https://www.youtube.com/@gobindrai.e.w.talwandhibha4282'}, {name:"Mail",src:'mailto:gobindrai@gmail.com'}].map((x) => {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const Icon = (icons as any)[x];
+        const Icon = (icons as any)[x.name];
         return (
-          <Tooltip key={x}>
+          <Tooltip key={x.name}>
             <TooltipTrigger>
+              <Link href={x.src} target="_blank" rel="noopener noreferrer">
+                
               <Icon className="hover:scale-110 hover:-translate-y-1 transition-all dark:hover:stroke-[#f2e8cf] hover:stroke-black" />
+              </Link>
             </TooltipTrigger>
             <TooltipContent>
-              <p>{x}</p>
+              <p>{x.name}</p>
             </TooltipContent>
           </Tooltip>
         );
