@@ -1,10 +1,15 @@
 'use client'
 import * as React from 'react';
 import { Button } from '../ui/button';
+import { useTheme } from 'next-themes';
 
 const Theme: React.FC = () => {
+  const { theme, setTheme } = useTheme();
+
   const changeTheme = () => {
-    window.document.body.classList.toggle('dark');
+    setTheme(theme === "dark" ? "light" : "dark");
+
+    // window.document.body.classList.toggle('dark');
   }
   return (
     <div>
