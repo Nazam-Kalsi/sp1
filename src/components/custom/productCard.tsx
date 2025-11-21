@@ -96,15 +96,16 @@ const titan = Titan_One({
                     >
                       {active.title}
                     </motion.h3>
-                    <motion.p
+                    {/*<motion.p
                       layoutId={`description-${active.description}-${id}`}
                       className="text-neutral-600 dark:text-neutral-400 text-base"
                     >
                       {active.description}
                     </motion.p>
+                  */}
                   </div>
 
-                  <motion.a
+                  {/*<motion.a
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -114,7 +115,7 @@ const titan = Titan_One({
                     className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
                   >
                     {active.ctaText}
-                  </motion.a>
+                  </motion.a>*/}
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.div
