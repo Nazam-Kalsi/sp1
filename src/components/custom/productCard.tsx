@@ -223,7 +223,7 @@ const cards = [
     content: () => {
       return (
         <p>
-         front weights
+         Our front weights are manufactured using high-grade materials, precision-molded for consistency, and built to withstand rough agricultural conditions. Available in multiple weight options, they provide the perfect balance for both small and large tractors.
         </p>
       );
     },
@@ -237,7 +237,7 @@ const cards = [
     content: () => {
       return (
         <p>
-          Hood
+          Our tractor hoods are manufactured using high-quality materials. Each hood is precisely molded for accurate fitting and long-lasting performance, even in harsh agricultural conditions. With smooth finishing and strong structure, they enhance both the style and strength of the tractor.
         </p>
       );
     },
@@ -251,7 +251,7 @@ const cards = [
     content: () => {
       return (
         <p>
-          Guard
+          Each wheel guard is precisely shaped for accurate fitting, strong protection, and long-lasting durability, even in rough agricultural conditions. With a smooth finish and robust structure, they prevent mud splashes, safeguard the operator, and enhance the overall look and safety of the tractor
         </p>
       );
     },
