@@ -105,7 +105,7 @@ const HeroSection: React.FC = () => {
       height={590}
       unoptimized
       // fill
-      className="absolute right-0 bottom-0 object-fit opacity-25 dark:opacity-25"
+      className="absolute right-0 bottom-0 object-fit opacity-40 dark:opacity-40"
       />
       </div>
       <div className='absolute z-[-10] w-screen h-screen lg:block hidden'>
@@ -116,7 +116,7 @@ const HeroSection: React.FC = () => {
       height={590}
       unoptimized
       // fill
-      className="absolute left-0 bottom-0 object-fit opacity-25 dark:opacity-25"
+      className="absolute left-0 bottom-0 object-fit opacity-40 dark:opacity-40"
       />
       </div>
       {/*<BackgroundBeams className='z-[-10]'/> */}
