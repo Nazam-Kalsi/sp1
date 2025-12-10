@@ -16,7 +16,7 @@ const About: React.FC= () => {
       id="about"
       className="relative px-4 sm:px-8 lg:px-20 py-16 sm:py-24 transition-colors bg-[#63A361] dark:bg-linear-to-b dark:from-violet-600/50 dark:to-transparent dark:bg-transparent overflow-hidden"
     >
-      <div className='absolute z-[10]  w-screen h-screen overflow-hidden lg:block hidden'>
+      <div className='absolute z-[10] w-screen h-screen overflow-hidden lg:block hidden'>
           <Image
           alt="Hero Background"
           src="/images/hood.jpg"
@@ -56,7 +56,7 @@ const About: React.FC= () => {
           className="absolute rounded-2xl size-40 left-0 bottom-10 object-fit opacity-100 "
           />
       </div>
-       <div className='absolute z-[10] w-screen h-screen'>
+       <div className='absolute z-[10] w-screen h-full'>
             <Image
             alt="Hero Background"
             src="/images/bgRemovedTwoGreen.png"
@@ -64,7 +64,7 @@ const About: React.FC= () => {
             height={590}
             unoptimized
             // fill
-            className="absolute left-0 sm:left-[25%] bottom-0 object-fit opacity-15 "
+            className="absolute left-0 sm:left-[25%] bottom-24 object-fit opacity-15 "
             />
             </div>
       <div className="max-w-3xl mx-auto text-center font-normal">

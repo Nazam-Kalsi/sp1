@@ -4,7 +4,7 @@ import HeroSection from "@/components/custom/heroSec";
 import Products from "@/components/custom/products";
 import Header from "@/components/custom/header";
 import Footer from "@/components/custom/footer";
-import YoutubeVideos from "@/components/custom/youtubePlayer";
+// import YoutubeVideos from "@/components/custom/youtubePlayer";
 export default function Home() {
   return (
    <main className="relative">
@@ -12,7 +12,7 @@ export default function Home() {
      <HeroSection/>
      <About/>
      <Products/>
-     <YoutubeVideos/>
+     {/*<YoutubeVideos/>*/}
      <Contact/>
      <Footer/>
    </main>
