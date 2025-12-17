@@ -33,7 +33,7 @@ const Header: React.FC = () => {
              <Link href="/"><Button variant="ghost">Home</Button></Link>
              <Link href="#about"><Button variant="ghost">About</Button></Link>
              <Link href="#products"><Button variant="ghost">Products</Button></Link>
-             <Link href="#youtube"><Button variant="ghost">Videos</Button></Link>
+             {/*<Link href="#youtube"><Button variant="ghost">Videos</Button></Link>*/}
              <Link href="#contact">
                <Button variant="ghost">Contact</Button>
              </Link>
@@ -76,9 +76,9 @@ const Header: React.FC = () => {
                <Link href="#contact" onClick={() => setOpen(false)}>
                  <Button className="w-full" variant="ghost">Contact</Button>
                </Link>
-               <Link href="#youtube" onClick={() => setOpen(false)}>
+               {/*<Link href="#youtube" onClick={() => setOpen(false)}>
                  <Button className="w-full" variant="ghost">Videos</Button>
-               </Link>
+               </Link>*/}
              </div>
            </div>
          )}

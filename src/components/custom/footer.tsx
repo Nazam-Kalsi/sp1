@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
               </a>
             </li>
           
-            <li>
+            {/*<li>
               <a
                 href="#youtube"
                 className="relative group transition-all duration-300 hover:text-blue-500 active:scale-95"
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                 Videos
                 <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
-            </li>
+            </li>*/}
           
             <li>
               <a

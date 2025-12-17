@@ -42,7 +42,7 @@ export const videoData = [
   },
   {
     id: "OZLsgAtDDrw",
-    title: "Wiz Khalifa - See You Again ft. Charlie Puth",
+    title: "",
     thumbnail: "https://www.youtube.com/watch?v=OZLsgAtDDrw"
   }
 ];

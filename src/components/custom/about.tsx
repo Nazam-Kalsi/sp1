@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Titan_One,Satisfy } from "next/font/google";
+import Image from 'next/image';
 
 const titan = Titan_One({
   subsets: ["latin"],
@@ -20,18 +21,16 @@ const About: React.FC= () => {
           The Vision That Guides Us
         </h1>
     
-        <h5 className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 font-sans pb-3">
+        <h5 className="text-base sm:text-lg md:text-xl text-gray-700 leading-none dark:text-gray-300 font-sans pb-3">
           Moving forward with a vision built around people and progress.
         </h5>
     
-        <div className="text-sm sm:text-base md:text-lg text-justify leading-relaxed font-sans">
+        <div className=" text-sm sm:text-base md:text-lg text-justify leading-normal font-sans">
           At <span className={`text-[#FFFD8F] ${satisify.className} text-shadow-lg`}>Gobind Rai Engg. Works</span> , we do one thing extremely well:<br/>
-          we build tractor parts that <span className={`text-[#FFFD8F] ${satisify.className} text-shadow-lg`}>&nbsp;refuse to quit.</span><br/>
-          <br/>
-          
+          we build tractor parts that <span className={`text-[#FFFD8F] ${satisify.className} text-shadow-lg`}>&nbsp;refuse to quit.</span><br/><br/>
           we specialize in manufacturing <span className='font-semibold'>modified parts, premium spare parts, custom hoods, and essential accessories </span>for tractors of all kinds. Whether it’s performance, durability, raw power, or long-lasting strength — <span className={`text-[#FFFD8F] ${satisify.className} text-shadow-lg`}>&nbsp;we’ve got you covered.</span><br/><br/>
           
-          Our workshop isn’t just a <span className={`text-[#FFFD8F] ${satisify.className} text-shadow-lg`}>&nbsp;workshop.</span><br/>
+          <span className='font-semibold'>Our workshop isn’t just a <span className={`text-[#FFFD8F] ${satisify.className} text-shadow-lg`}>&nbsp;workshop.</span><br/></span>
           It’s where precision engineering meets everyday farming needs.
           Where tough jobs get tougher solutions.
           And where <span className={`text-[#FFFD8F] ${satisify.className} text-shadow-lg`}>&nbsp;“good enough” </span> never makes it past the front gate.          

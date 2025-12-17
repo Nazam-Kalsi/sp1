@@ -16,6 +16,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Imperial_Script,Titan_One,Playball } from "next/font/google";
+import Image from "next/image";
 
 const imperial = Imperial_Script({
   subsets: ["latin"],
@@ -94,8 +95,30 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="herosection"
-      className="h-screen flex flex-col gap-2 md:gap-8 items-center justify-center relative"
+      className="h-screen flex flex-col gap-2 md:gap-8 items-center justify-center relative overflow-hidden"
     >
+      <div className='absolute z-[-10] w-screen h-screen'>
+      <Image
+      alt="Hero Background"
+      src="/images/bgRemovedTwoGreen.png"
+      width={590}
+      height={590}
+      unoptimized
+      // fill
+      className="absolute right-0 bottom-0 object-fit opacity-40 dark:opacity-40"
+      />
+      </div>
+      <div className='absolute z-[-10] w-screen h-screen lg:block hidden'>
+      <Image
+      alt="Hero Background"
+      src="/images/bgRemovedTwoRed.png"
+      width={590}
+      height={590}
+      unoptimized
+      // fill
+      className="absolute left-0 bottom-0 object-fit opacity-40 dark:opacity-40"
+      />
+      </div>
       {/*<BackgroundBeams className='z-[-10]'/> */}
       <Spotlight
         className="-top-40 left-0 md:-top-20 md:left-60"
@@ -105,7 +128,7 @@ const HeroSection: React.FC = () => {
         <div className="absolute inset-0 bg-linear-to-t from-[#63A361] dark:from-gray-900 via-transparent to-transparent z-0 pointer-events-none" />
         <div className="group rounded-full border border-black/5  text-base transition-all ease-in hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800">
           <div className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-            <span className={`${playball.className} text-[#216621] dark:text-[#FFFD8F]`}>✨ Gobind Rai Engg. Works</span>
+            <span className={`${playball.className} text-[#216621] dark:text-[#FFFD8F]`}>✨ Premium Manufacturing</span>
             <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
           </div>
         </div>
@@ -113,17 +136,26 @@ const HeroSection: React.FC = () => {
         <h1 className={`text-6xl text-center font-bold ${titan.className} text-[#63A361] dark:text-white text-shadow-lg`}>
           The only <span className={`text-7xl dark:text-[#FFFD8F] ${imperial.className}`}>store</span> you need
         </h1>
-        <p className={`text-center  font-semibold dark:text-[#FFFD8F] ${playball.className}`}>
-          Explore our products and services.
+        <h1 className={`text-4xl text-center font-bold ${titan.className} text-[#63A361] dark:text-violet-700 text-shadow-lg`}>
+         Talwandi Bhai
+         {/* <span className={`text-7xl ${imperial.className}`}>store</span> you need */}
+        </h1>
+        <p className={`text-center  font-semibold text-[#3c643b] dark:text-[#FFFD8F] ${titan.className}`}>
+         
         </p>
         <p className="dark:text-white">
           Our mission is to provide high-quality products and exceptional
           customer service.
         </p>
       </div>
-      <div className="flex gap-2 z-99">
-        <Link href="#products">
-          <Button variant="outline">Products</Button>
+      <div className="flex gap-10 z-99">
+        <Link href="# ">
+        <div className="group rounded-full border border-black/5  text-base transition-all ease-in bg-white hover:-translate-y-1 hover:scale-105 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800">
+          <div className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+            <span className={`${playball.className} text-[#216621] dark:text-[#FFFD8F]`}>✨ Explore Products</span>
+            <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+          </div>
+        </div>
         </Link>
         <Link href="#contact">
           <Button className="bg-[#63A361] hover:bg-[#63B861] dark:bg-white dark:text-black">Contact us</Button>
