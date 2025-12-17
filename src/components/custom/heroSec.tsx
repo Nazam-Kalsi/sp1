@@ -134,19 +134,23 @@ const HeroSection: React.FC = () => {
         </div>
 
         <h1 className={`text-6xl text-center font-bold ${titan.className} text-[#63A361] dark:text-white text-shadow-lg`}>
-          The only <span className={`text-7xl dark:text-[#FFFD8F] ${imperial.className}`}>store</span> you need
-        </h1>
-        <h1 className={`text-4xl text-center font-bold ${titan.className} text-[#63A361] dark:text-violet-700 text-shadow-lg`}>
-         Talwandi Bhai
-         {/* <span className={`text-7xl ${imperial.className}`}>store</span> you need */}
-        </h1>
-        <p className={`text-center  font-semibold text-[#3c643b] dark:text-[#FFFD8F] ${titan.className}`}>
-         
-        </p>
-        <p className="dark:text-white">
-          Our mission is to provide high-quality products and exceptional
-          customer service.
-        </p>
+                 Gobind Rai Engg. Works
+                 {/* <span className={`text-7xl ${imperial.className}`}>store</span> you need */}
+                </h1>
+                <h1 className={`text-4xl text-center font-bold ${titan.className} text-[#63A361] dark:text-white text-shadow-lg`}>
+                 Talwandi Bhai
+                 {/* <span className={`text-7xl ${imperial.className}`}>store</span> you need */}
+                </h1>
+                <p className={`text-center  font-semibold text-[#3c643b] dark:text-[#FFFD8F] ${titan.className}`}>
+                 
+                </p>
+                <p className={`text-center  font-semibold text-[#3c643b] dark:text-[#FFFD8F] ${titan.className}`}>
+                 Expert Tractor Parts Manufacturing
+                </p>
+                <p className={`dark:text-[#FFFD8F] ${playball.className}`}>
+                  Our mission is to provide high-quality   and exceptional
+                  customer service.
+                </p>
       </div>
       <div className="flex gap-10 z-99">
         <Link href="# ">

@@ -14,10 +14,61 @@ const About: React.FC= () => {
   return (
     <section
       id="about"
-      className="px-4 sm:px-8 lg:px-20 py-16 sm:py-24 transition-colors bg-[#63A361] dark:bg-linear-to-b dark:from-gray-900 dark:to-transparent dark:bg-transparent"
+      className="relative px-4 sm:px-8 lg:px-20 py-16 sm:py-24 transition-colors bg-[#63A361] dark:bg-linear-to-b dark:from-gray-700 dark:to-transparent dark:bg-transparent overflow-hidden"
     >
-      <div className="max-w-3xl mx-auto text-center">
-        <h1 className={`text-3xl sm:text-4xl md:text-5xl text-[#FFFD8F] dark:text-white text-shadow-lg ${titan.className} pb-1`}>
+      <div className='absolute z-[10] w-screen h-screen overflow-hidden lg:block hidden'>
+          <Image
+          alt="Hero Background"
+          src="/images/hood.jpg"
+          width={590}
+          height={590}
+          unoptimized
+          // fill
+          className="absolute rounded-2xl size-40 left-0 top-0 object-fit opacity-100 "
+          />
+      </div>
+      <div className='absolute z-[10]  w-screen h-screen overflow-hidden lg:block hidden'>
+          <Image
+          alt="Hero Background"
+          src="/images/twoGreen.jpg"
+          width={590}
+          height={590}
+          unoptimized
+          // fill
+          className="absolute rounded-2xl size-40 right-50 top-60 object-fit opacity-100"
+          />
+          <Image
+          alt="Hero Background"
+          src="/images/twoGreen.jpg"
+          width={590}
+          height={590}
+          unoptimized
+          // fill
+          className="absolute rounded-2xl size-40 right-50 top-60 object-fit opacity-100"
+          />
+          <Image
+          alt="Hero Background"
+          src="/images/greenT.jpg"
+          width={590}
+          height={590}
+          unoptimized
+          // fill
+          className="absolute rounded-2xl size-40 left-0 bottom-10 object-fit opacity-100 "
+          />
+      </div>
+       <div className='absolute z-[10] w-screen h-full'>
+            <Image
+            alt="Hero Background"
+            src="/images/bgRemovedTwoGreen.png"
+            width={590}
+            height={590}
+            unoptimized
+            // fill
+            className="absolute left-0 sm:left-[25%] bottom-24 object-fit opacity-15 "
+            />
+            </div>
+      <div className="max-w-3xl mx-auto text-center font-normal">
+        <h1 className={`text-3xl sm:text-4xl md:text-5xl text-[#FFFD8F] text-shadow-lg ${titan.className} pb-1`}>
           The Vision That Guides Us
         </h1>
     
