@@ -13,10 +13,10 @@ const About: React.FC= () => {
   return (
     <section
       id="about"
-      className="px-4 sm:px-8 lg:px-20 py-16 sm:py-24 transition-colors bg-[#63A361] dark:bg-linear-to-b dark:from-violet-600/50 dark:to-transparent dark:bg-transparent"
+      className="px-4 sm:px-8 lg:px-20 py-16 sm:py-24 transition-colors bg-[#63A361] dark:bg-linear-to-b dark:from-gray-900 dark:to-transparent dark:bg-transparent"
     >
       <div className="max-w-3xl mx-auto text-center">
-        <h1 className={`text-3xl sm:text-4xl md:text-5xl text-[#FFFD8F] text-shadow-lg ${titan.className} pb-1`}>
+        <h1 className={`text-3xl sm:text-4xl md:text-5xl text-[#FFFD8F] dark:text-white text-shadow-lg ${titan.className} pb-1`}>
           The Vision That Guides Us
         </h1>
     

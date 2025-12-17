@@ -102,7 +102,7 @@ const HeroSection: React.FC = () => {
         fill="white"
       />
       <div className="text-center flex flex-col items-center justify-center px-2 gap-1">
-        <div className="absolute inset-0 bg-linear-to-t from-[#63A361] dark:from-violet-600/50 via-transparent to-transparent z-0 pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#63A361] dark:from-gray-900 via-transparent to-transparent z-0 pointer-events-none" />
         <div className="group rounded-full border border-black/5  text-base transition-all ease-in hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800">
           <div className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
             <span className={`${playball.className} text-[#216621] dark:text-[#FFFD8F]`}>✨ Gobind Rai Engg. Works</span>
@@ -110,13 +110,13 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        <h1 className={`text-6xl text-center font-bold ${titan.className} text-[#63A361] dark:text-violet-700 text-shadow-lg`}>
-          The only <span className={`text-7xl ${imperial.className}`}>store</span> you need
+        <h1 className={`text-6xl text-center font-bold ${titan.className} text-[#63A361] dark:text-white text-shadow-lg`}>
+          The only <span className={`text-7xl dark:text-[#FFFD8F] ${imperial.className}`}>store</span> you need
         </h1>
         <p className={`text-center  font-semibold dark:text-[#FFFD8F] ${playball.className}`}>
           Explore our products and services.
         </p>
-        <p className="dark:text-[#FFFD8F]">
+        <p className="dark:text-white">
           Our mission is to provide high-quality products and exceptional
           customer service.
         </p>
@@ -126,7 +126,7 @@ const HeroSection: React.FC = () => {
           <Button variant="outline">Products</Button>
         </Link>
         <Link href="#contact">
-          <Button className="bg-[#63A361] hover:bg-[#63B861] dark:bg-violet-700 dark:hover:bg-violet-800 dark:text-white">Contact us</Button>
+          <Button className="bg-[#63A361] hover:bg-[#63B861] dark:bg-white dark:text-black">Contact us</Button>
         </Link>
         <Social className="absolute bottom-14 sm:right-14 right-16"/>
       </div>

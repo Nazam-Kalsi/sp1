@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
         <Social className = ''/>
         <p className= 'text-center font-sans'>© 2025 Gobind Rai Engg. Works. All rights reserved.</p>
       </div>
-      <div className="absolute inset-0 bg-linear-to-t from-[#63A361] dark:from-violet-600/50 to-transparent z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-t from-[#63A361] dark:from-gray-700 to-transparent z-0 pointer-events-none" />
     </footer>
   );
 };

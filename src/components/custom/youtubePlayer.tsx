@@ -56,7 +56,7 @@ export const videoData = [
     <>
       {/* Thumbnail Card */}
       <div
-        className="w-full max-w-sm cursor-pointer rounded-xl overflow-hidden hover:scale-[1.02] transition-transform flex items-center justify-center bg-linear-to-b from-[#63A361] dark:from-violet-700 to-transparent hover:shadow-xl p-3 mx-2"
+        className="w-full max-w-sm cursor-pointer rounded-xl overflow-hidden hover:scale-[1.02] transition-transform flex items-center justify-center bg-linear-to-b from-[#63A361] dark:from-gray-700 to-transparent hover:shadow-xl p-3 mx-2"
         onClick={() => setOpen(true)}
       >
                  
@@ -99,7 +99,7 @@ export const videoData = [
 const YoutubeVideos: React.FC = () => {
   return (
     <section id='youtube' className='space-y-2 py-16 bg-linear-to-b from-white to-[#63A361] dark:to-transparent dark:from-transparent'>
-      <h1 className={`text-center text-3xl sm:text-4xl md:text-5xl font-bold  p-4  text-[#63A361] dark:text-violet-700 text-shadow-lg ${titan.className}`}>Youtube Videos</h1>
+      <h1 className={`text-center text-3xl sm:text-4xl md:text-5xl font-bold  p-4  text-[#63A361] dark:text-white text-shadow-lg ${titan.className}`}>Youtube Videos</h1>
       <div className="flex items-center justify-center gap-4 flex-wrap">
         {videoData.map((v,i)=>{
           return(
