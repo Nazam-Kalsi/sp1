@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Gobind Rai Engg. Works" }],
   creator: "Gobind Rai Engg. Works",
   publisher: "Gobind Rai Engg. Works",
-  metadataBase: new URL((process.env.NEXT_PUBLIC_PROD_URL as string)), //change in production
+  metadataBase: new URL('www.shop.gobindrai.in'),
 
   // OpenGraph (for WhatsApp, LinkedIn, FB)
   openGraph: {
