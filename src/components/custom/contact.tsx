@@ -95,11 +95,11 @@ const Contact: React.FC = () => {
   return (
     <div className='bg-linear-to-b  from-[#63A361] to-transparent dark:from-transparent'>
     <div className="max-w-6xl max-lg:max-w-3xl mx-auto p-4 py-16" id='contact'>
-        <h1 className={`text-5xl pb-3 font-bold text-center  text-[#FFFD8F] dark:text-violet-700 text-shadow-lg ${titan.className}`}>Contact us</h1>
+        <h1 className={`text-5xl pb-3 font-bold text-center  text-[#FFFD8F] dark:text-white text-shadow-lg ${titan.className}`}>Contact us</h1>
           <div
-            className="grid lg:grid-cols-2 gap-16 items-center relative overflow-hidden p-8  before:absolute before:right-0 before:w-[300px] before:bg-[#FFFD8F] dark:before:bg-violet-700 before:h-full max-lg:before:hidden">
+            className="grid lg:grid-cols-2 gap-16 items-center relative overflow-hidden p-8  before:absolute before:right-0 before:w-[300px] before:bg-[#FFFD8F] dark:before:bg-gray-700 before:h-full max-lg:before:hidden">
             <div>
-            <h2 className={`text-2xl font-bold text-[#FFFD8F] dark:text-violet-700 ${titan.className} `}>Get In Touch</h2>
+            <h2 className={`text-2xl font-bold text-[#FFFD8F] dark:text-white ${titan.className} `}>Get In Touch</h2>
               <p className="text-[15px] leading-relaxed">Have a specific inquiry Our
                 experienced team is ready to engage with you.</p>
     

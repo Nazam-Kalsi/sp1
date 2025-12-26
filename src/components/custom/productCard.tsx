@@ -143,7 +143,7 @@ const titan = Titan_One({
                 layoutId={`card-${card.title}-${id}`}
                 key={index}
                 onClick={() => setActive(card)}
-                className="p-4 flex flex-col bg-linear-to-b from-[#63A361] dark:from-violet-700 to-transparent hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+                className="p-4 flex flex-col bg-linear-to-b from-[#63A361] dark:from-gray-700 to-transparent hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
               >
                 <div className="flex gap-4 flex-col  w-full">
                   <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -252,6 +252,132 @@ const cards = [
       return (
         <p>
           Each wheel guard is precisely shaped for accurate fitting, strong protection, and long-lasting durability, even in rough agricultural conditions. With a smooth finish and robust structure, they prevent mud splashes, safeguard the operator, and enhance the overall look and safety of the tractor
+        </p>
+      );
+    },
+  },
+  {
+    // description: "",
+    title: "Modification",
+    src: "/images/modified.jpg",
+    // ctaText: "Visit",
+    // ctaLink: "#",
+    content: () => {
+      return (
+        <p>
+          Tractor Modification
+        </p>
+      );
+    },
+  },
+  {
+    // description: "",
+    title: "Modification",
+    src: "/images/modified_b.jpg",
+    // ctaText: "Visit",
+    // ctaLink: "#",
+    content: () => {
+      return (
+        <p>
+          Tractor Modification
+        </p>
+      );
+    },
+  },
+  {
+    // description: "",
+    title: "Customization",
+    src: "/images/2red.jpg",
+    // ctaText: "Visit",
+    // ctaLink: "#",
+    content: () => {
+      return (
+        <p>
+          Customization
+        </p>
+      );
+    },
+  },
+  {
+    // description: "",
+    title: "Premium build",
+    src: "/images/back.jpg",
+    // ctaText: "Visit",
+    // ctaLink: "#",
+    content: () => {
+      return (
+        <p>
+          Premium build
+        </p>
+      );
+    },
+  },
+  {
+    // description: "",
+    title: "Weights",
+    src: "/images/redweights.jpg",
+    // ctaText: "Visit",
+    // ctaLink: "#",
+    content: () => {
+      return (
+        <p>
+          Weights
+        </p>
+      );
+    },
+  },
+  {
+    // description: "",
+    title: "Satisfied Clients",
+    src: "/images/clients.jpg",
+    // ctaText: "Visit",
+    // ctaLink: "#",
+    content: () => {
+      return (
+        <p>
+          Satisfied Clients
+        </p>
+      );
+    },
+  },
+  {
+    // description: "",
+    title: "Clean Finishing",
+    src: "/images/modified_c.jpg",
+    // ctaText: "Visit",
+    // ctaLink: "#",
+    content: () => {
+      return (
+        <p>
+          Clean Finishing
+        </p>
+      );
+    },
+  },
+  {
+    // description: "",
+    title: "Perfect Manufacturing",
+    src: "/images/2green.jpg",
+    // ctaText: "Visit",
+    // ctaLink: "#",
+    content: () => {
+      return (
+        <p>
+          Perfect Manufacturing
+        </p>
+      );
+    },
+  },
+  {
+    // description: "",
+    title: "Seamless Production",
+    src: "/images/all.jpg",
+    // ctaText: "Visit",
+    // ctaLink: "#",
+    content: () => {
+      return (
+        <p>
+          Seamless Production
         </p>
       );
     },

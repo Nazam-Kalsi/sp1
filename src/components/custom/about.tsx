@@ -14,7 +14,7 @@ const About: React.FC= () => {
   return (
     <section
       id="about"
-      className="relative px-4 sm:px-8 lg:px-20 py-16 sm:py-24 transition-colors bg-[#63A361] dark:bg-linear-to-b dark:from-violet-600/50 dark:to-transparent dark:bg-transparent overflow-hidden"
+      className="relative px-4 sm:px-8 lg:px-20 py-16 sm:py-24 transition-colors bg-[#63A361] dark:bg-linear-to-b dark:from-gray-700 dark:to-transparent dark:bg-transparent overflow-hidden"
     >
       <div className='absolute z-[10] w-screen h-screen overflow-hidden lg:block hidden'>
           <Image
