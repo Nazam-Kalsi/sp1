@@ -1,6 +1,7 @@
 {
   "name": "singlepage_a",
   "version": "0.1.0",
+  "homepage": "https://shop.gobindrai.in",
   "private": true,
   "scripts": {
     "dev": "next dev",
