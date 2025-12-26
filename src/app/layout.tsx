@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Gobind Rai Engg. Works",
     description: "We build tractor parts that refuse to quit.",
-    url: (process.env.PROD_URL as string),
+    url: ('https://www.shop.gobindrai.in'),
     siteName: "Gobind Rai Engg. Works",
     images: [
       {
