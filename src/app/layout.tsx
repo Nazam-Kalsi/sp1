@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Gobind Rai Engg. Works",
     images: [
       {
-        url: "/images/guard.jpg",
+        url: "images/guard.jpg",
         width: 1200,
         height: 630,
         alt: "Gobind Rai Engg. Works"
@@ -52,14 +52,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Gobind Rai Engg. Works",
     description: "We build tractor parts that refuse to quit.",
-    images: ["/images/hood.jpg"],
+    images: ["images/hood.jpg"],
   },
 
   // Icons
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/images/logo.png",
+    apple: "images/logo.png",
   },
 
   // Robots

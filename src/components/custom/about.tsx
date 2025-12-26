@@ -19,7 +19,7 @@ const About: React.FC= () => {
       <div className='absolute z-[10] w-screen h-screen overflow-hidden lg:block hidden'>
           <Image
           alt="Hero Background"
-          src="/images/hood.jpg"
+          src="images/hood.jpg"
           width={590}
           height={590}
           unoptimized
@@ -30,7 +30,7 @@ const About: React.FC= () => {
       <div className='absolute z-[10]  w-screen h-screen overflow-hidden lg:block hidden'>
           <Image
           alt="Hero Background"
-          src="/images/twoGreen.jpg"
+          src="images/twoGreen.jpg"
           width={590}
           height={590}
           unoptimized
@@ -39,7 +39,7 @@ const About: React.FC= () => {
           />
           <Image
           alt="Hero Background"
-          src="/images/twoGreen.jpg"
+          src="images/twoGreen.jpg"
           width={590}
           height={590}
           unoptimized
@@ -48,7 +48,7 @@ const About: React.FC= () => {
           />
           <Image
           alt="Hero Background"
-          src="/images/greenT.jpg"
+          src="images/greenT.jpg"
           width={590}
           height={590}
           unoptimized
@@ -59,7 +59,7 @@ const About: React.FC= () => {
        <div className='absolute z-[10] w-screen h-full'>
             <Image
             alt="Hero Background"
-            src="/images/bgRemovedTwoGreen.png"
+            src="images/bgRemovedTwoGreen.png"
             width={590}
             height={590}
             unoptimized

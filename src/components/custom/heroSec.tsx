@@ -100,7 +100,7 @@ const HeroSection: React.FC = () => {
       <div className='absolute z-[-10] w-screen h-screen'>
       <Image
       alt="Hero Background"
-      src="/images/bgRemovedTwoGreen.png"
+      src="images/bgRemovedTwoGreen.png"
       width={590}
       height={590}
       unoptimized
@@ -111,7 +111,7 @@ const HeroSection: React.FC = () => {
       <div className='absolute z-[-10] w-screen h-screen lg:block hidden'>
       <Image
       alt="Hero Background"
-      src="/images/bgRemovedTwoRed.png"
+      src="images/bgRemovedTwoRed.png"
       width={590}
       height={590}
       unoptimized

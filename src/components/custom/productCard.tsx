@@ -217,7 +217,7 @@ const cards = [
   {
     // description: "Front Weights",
     title: "Front Weights",
-    src: "/images/weights.jpg",
+    src: "images/weights.jpg",
     // ctaText: "Visit",
     // ctaLink: "#",
     content: () => {
@@ -231,7 +231,7 @@ const cards = [
   {
     // description: "Hood",
     title: "Hood",
-    src: "/images/hood.jpg",
+    src: "images/hood.jpg",
     // ctaText: "Visit",
     // ctaLink: "#",
     content: () => {
@@ -245,7 +245,7 @@ const cards = [
   {
     // description: "",
     title: "Wheel guard",
-    src: "/images/guard.jpg",
+    src: "images/guard.jpg",
     // ctaText: "Visit",
     // ctaLink: "#",
     content: () => {
@@ -259,7 +259,7 @@ const cards = [
   {
     // description: "",
     title: "Modification",
-    src: "/images/modified.jpg",
+    src: "images/modified.jpg",
     // ctaText: "Visit",
     // ctaLink: "#",
     content: () => {
@@ -273,7 +273,7 @@ const cards = [
   {
     // description: "",
     title: "Modification",
-    src: "/images/modified_b.jpg",
+    src: "images/modified_b.jpg",
     // ctaText: "Visit",
     // ctaLink: "#",
     content: () => {
@@ -287,7 +287,7 @@ const cards = [
   {
     // description: "",
     title: "Customization",
-    src: "/images/2red.jpg",
+    src: "images/2red.jpg",
     // ctaText: "Visit",
     // ctaLink: "#",
     content: () => {
@@ -301,7 +301,7 @@ const cards = [
   {
     // description: "",
     title: "Premium build",
-    src: "/images/back.jpg",
+    src: "images/back.jpg",
     // ctaText: "Visit",
     // ctaLink: "#",
     content: () => {
@@ -315,7 +315,7 @@ const cards = [
   {
     // description: "",
     title: "Weights",
-    src: "/images/redweights.jpg",
+    src: "images/redweights.jpg",
     // ctaText: "Visit",
     // ctaLink: "#",
     content: () => {
@@ -329,7 +329,7 @@ const cards = [
   {
     // description: "",
     title: "Satisfied Clients",
-    src: "/images/clients.jpg",
+    src: "images/clients.jpg",
     // ctaText: "Visit",
     // ctaLink: "#",
     content: () => {
@@ -343,7 +343,7 @@ const cards = [
   {
     // description: "",
     title: "Clean Finishing",
-    src: "/images/modified_c.jpg",
+    src: "images/modified_c.jpg",
     // ctaText: "Visit",
     // ctaLink: "#",
     content: () => {
@@ -357,7 +357,7 @@ const cards = [
   {
     // description: "",
     title: "Perfect Manufacturing",
-    src: "/images/2green.jpg",
+    src: "images/2green.jpg",
     // ctaText: "Visit",
     // ctaLink: "#",
     content: () => {
@@ -371,7 +371,7 @@ const cards = [
   {
     // description: "",
     title: "Seamless Production",
-    src: "/images/all.jpg",
+    src: "images/all.jpg",
     // ctaText: "Visit",
     // ctaLink: "#",
     content: () => {
